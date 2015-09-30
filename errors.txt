@@ -1,0 +1,9 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/variables.rpy", line 44: while statement expects a non-empty block.
+    while real_world == "True":        
+                                       ^
+
+Ren'Py Version: Ren'Py 6.99.5.602

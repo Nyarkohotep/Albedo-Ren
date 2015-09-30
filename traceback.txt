@@ -1,0 +1,35 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 151, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 358, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 368, in <module>
+    renpy.load("_reload-2")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 151, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 358, in script
+    python hide:
+  File "C:\renpy-6.99.5-sdk\renpy\ast.py", line 797, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\renpy-6.99.5-sdk\renpy\python.py", line 1448, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 368, in <module>
+    renpy.load("_reload-2")
+  File "C:\renpy-6.99.5-sdk\renpy\loadsave.py", line 580, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\renpy-6.99.5-sdk\renpy\python.py", line 1432, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=False, on_load=True)
+  File "C:\renpy-6.99.5-sdk\renpy\python.py", line 1287, in rollback
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+
+Windows-7-6.1.7600
+Ren'Py 6.99.5.602
+Albedo-Ren 0.0
