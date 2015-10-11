@@ -1,9 +1,10 @@
 ﻿init -50 python:   
     class Char: ### Шаблон для статов персонажей
-        def __init__(self,fname,name,age,hp,hpmax,mp,mpmax,sp,spmax,str,will,agil,spd,endr,willp,int):
+        def __init__(self,fname,name,age,lvl,hp,hpmax,mp,mpmax,sp,spmax,str,will,agil,spd,endr,willp,int):
             self.fname = fname # Фамилия
             self.name = name   # Имя
             self.age = age      # Возраст
+            self.lvl = lvl      # Уровень
             self.hp = hp        # Хит поинты
             self.hpmax = hpmax    # Максимальное кол-во хитпоинтов
             self.mp = mp         #  Мана
@@ -21,7 +22,14 @@
 label init_start:         ###СЮДА ВВОДИМ ПЕРЕМЕННЫЕ
     # Статы нашего героя
     python:
-        hero = Char("Харитонов", "Игорь", 42, 100, 100, 100, 100, 100, 100, 10, 10, 10, 10, 10, 10, 10)
+        hero = Char("Харитонов", "Игорь", 42, 1, 100, 100, 100, 100, 100, 100, 10, 10, 10, 10, 10, 10, 10)
+        
+    # Бодрость
+    bodr = 1000
+    bodr_max = 1000
+    
+    # Голод
+    hungry = 100
         
     # Наличка
     $ money = 50000
